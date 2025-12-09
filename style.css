@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+ 
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+ 
+.app-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.app-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+ 
+.app-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+}
+ 
+.chip {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 500;
+}
+ 
+.app-main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+ 
+/* Screens */
+.screen {
+  display: none;
+}
+ 
+.screen.active {
+  display: block;
+}
+ 
+/* Form elements */
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #4b5563;
+}
+ 
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+}
+ 
+input:focus,
+select:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+ 
+.button-primary {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.35);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+ 
+.button-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+ 
+.button-secondary {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+ 
+/* Chips, badges */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+ 
+.badge-positive {
+  background: #dcfce7;
+  color: #15803d;
+}
+ 
+.badge-negative {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+ 
+.badge-neutral {
+  background: #e5e7eb;
+  color: #374151;
+}
+ 
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  border: 1px solid #f3f4f6;
+}
+ 
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+ 
+.card-sub {
+  font-size: 12px;
+  color: #6b7280;
+}
+ 
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+ 
+/* Consumers checkbox list */
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+ 
+.checkbox-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  font-size: 12px;
+}
+ 
+.checkbox-pill input {
+  width: 14px;
+  height: 14px;
+}
+ 
+/* Bottom nav */
+.bottom-nav {
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0;
+}
+ 
+.nav-btn {
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 11px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+ 
+.nav-btn span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+ 
+.nav-btn.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+ 
+/* Small helper text */
+.helper-text {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+ 
+/* Layout spacing */
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+ 
+.section {
+  margin-bottom: 16px;
+}
+ 
+/* Scrollbar (for desktop) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}

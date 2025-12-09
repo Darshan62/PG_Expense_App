@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PG Expense Splitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="app-header">
+    <div>
+      <div class="app-title">PG Expense Splitter</div>
+      <div class="app-subtitle">Track chai, nashta, dinner & more</div>
+    </div>
+    <div class="chip">7-member group</div>
+  </header>
+ 
+  <main class="app-main">
+    <!-- ADD EXPENSE SCREEN -->
+    <section id="screen-add" class="screen active">
+      <div class="section">
+        <div class="section-title">Add expense</div>
+        <div class="helper-text">Fill who paid, what, and who shared.</div>
+      </div>
+ 
+      <form id="addExpenseForm">
+        <div class="section">
+          <label for="payerSelect">Payer</label>
+          <select id="payerSelect"></select>
+        </div>
+ 
+        <div class="section">
+          <label for="itemInput">Item</label>
+          <input id="itemInput" type="text" placeholder="Dosa, chai, movie ticket..." />
+        </div>
+ 
+        <div class="section">
+          <label for="amountInput">Amount (₹)</label>
+          <input id="amountInput" type="number" min="1" step="0.5" placeholder="e.g. 120" />
+        </div>
+ 
+        <div class="section">
+          <label>Consumers</label>
+          <div id="consumerCheckboxes" class="checkbox-list"></div>
+          <div class="helper-text">Select everyone who shared this expense.</div>
+        </div>
+ 
+        <button type="submit" class="button-primary">Add Expense</button>
+      </form>
+    </section>
+ 
+    <!-- EXPENSE LIST SCREEN -->
+    <section id="screen-expenses" class="screen">
+      <div class="section">
+        <div class="section-title">All expenses</div>
+        <div class="helper-text">Latest expenses appear on top.</div>
+      </div>
+      <div id="expensesList"></div>
+    </section>
+ 
+    <!-- SUMMARY SCREEN -->
+    <section id="screen-summary" class="screen">
+      <div class="section">
+        <div class="section-title">Balances</div>
+        <div id="summaryHeader" class="helper-text"></div>
+      </div>
+      <div id="summaryList"></div>
+      <button id="resetButton" class="button-secondary">Reset all expenses</button>
+    </section>
+ 
+    <!-- MEMBERS SCREEN -->
+    <section id="screen-members" class="screen">
+      <div class="section">
+        <div class="section-title">Group members</div>
+        <div class="helper-text">Add or view members in your PG group.</div>
+      </div>
+ 
+      <div id="membersList" class="section"></div>
+ 
+      <form id="addMemberForm" class="section">
+        <label for="newMemberInput">Add new member</label>
+        <input id="newMemberInput" type="text" placeholder="Enter name (e.g. New Friend)" />
+        <button type="submit" class="button-secondary">Add Member</button>
+      </form>
+    </section>
+  </main>
+ 
+  <nav class="bottom-nav">
+    <div class="nav-btn active" data-target="screen-add">
+      <span>＋</span>Add
+    </div>
+    <div class="nav-btn" data-target="screen-expenses">
+      <span>📄</span>Expenses
+    </div>
+    <div class="nav-btn" data-target="screen-summary">
+      <span>📊</span>Summary
+    </div>
+    <div class="nav-btn" data-target="screen-members">
+      <span>👥</span>Members
+    </div>
+  </nav>
+</div>
+ 
+<script src="app.js"></script>
+</body>
+</html>
+ 
